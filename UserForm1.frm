@@ -126,7 +126,7 @@ Private Sub CommandButton1_Click()
     originValue = Origin.Value
     
     Set objRequest = CreateObject("MSXML2.XMLHTTP")
-    weatherUrl = "https://api.openweathermap.org/data/2.5/weather?zip=" + originValue + ",US&appid=07727788fa65568471ea5be3747abdd3&units=imperial"
+    weatherUrl = "https://api.openweathermap.org/data/2.5/weather?zip=" + originValue + ",US&appid={apiKey}&units=imperial"
     blnAsync = True
      
      With objRequest
@@ -154,7 +154,7 @@ Private Sub CommandButton1_Click()
      Dim destTemp As Integer
      
      Set objRequest2 = CreateObject("MSXML2.XMLHTTP")
-     weatherUrl2 = "https://api.openweathermap.org/data/2.5/weather?zip=" + destinationValue + ",US&appid=07727788fa65568471ea5be3747abdd3&units=imperial"
+     weatherUrl2 = "https://api.openweathermap.org/data/2.5/weather?zip=" + destinationValue + ",US&appid={apiKey}&units=imperial"
      blnAsync = True
      
      With objRequest2
